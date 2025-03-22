@@ -1,0 +1,49 @@
+<div class="container mt-5" style="max-width: 600px;">
+  <h2 class="text-center mb-4">{{ isEdit ? 'Edit' : 'Add' }} Employee</h2>
+  <form (ngSubmit)="save()" class="card p-4 shadow">
+    <div class="form-group mb-3">
+      <label>First Name</label>
+      <input class="form-control" [(ngModel)]="employee.first_name" name="first_name" required />
+    </div>
+    <div class="form-group mb-3">
+      <label>Last Name</label>
+      <input class="form-control" [(ngModel)]="employee.last_name" name="last_name" required />
+    </div>
+    <div class="form-group mb-3">
+      <label>Email</label>
+      <input class="form-control" [(ngModel)]="employee.email" name="email" required />
+    </div>
+    <div class="form-group mb-3">
+      <label>Gender</label>
+      <select class="form-control" [(ngModel)]="employee.gender" name="gender" required>
+        <option value="">Select</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <div class="form-group mb-3">
+      <label>Department</label>
+      <input class="form-control" [(ngModel)]="employee.department" name="department" />
+    </div>
+    <div class="form-group mb-3">
+      <label>Designation</label>
+      <input class="form-control" [(ngModel)]="employee.designation" name="designation" />
+    </div>
+    <div class="form-group mb-3">
+      <label>Salary</label>
+      <input type="number" class="form-control" [(ngModel)]="employee.salary" name="salary" />
+    </div>
+    <div class="form-group mb-3">
+      <label>Date of Joining</label>
+      <input type="date" class="form-control" [(ngModel)]="employee.date_of_joining" name="date_of_joining" />
+    </div>
+    <div class="form-group mb-3">
+      <label>Profile Photo URL</label>
+      <input class="form-control" [(ngModel)]="employee.employee_photo" name="employee_photo" />
+    </div>
+    <button type="submit" class="btn btn-success w-100">
+      {{ isEdit ? 'Update' : 'Add' }} Employee
+    </button>
+  </form>
+</div>

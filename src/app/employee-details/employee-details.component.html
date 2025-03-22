@@ -1,0 +1,39 @@
+<div class="container mt-5" *ngIf="employee">
+  <h2>👤 Employee Detail</h2>
+  <table class="table table-bordered mt-3">
+    <tr>
+      <th>Full Name</th>
+      <td>{{ employee.first_name }} {{ employee.last_name }}</td>
+    </tr>
+    <tr>
+      <th>Email</th>
+      <td>{{ employee.email }}</td>
+    </tr>
+    <tr>
+      <th>Gender</th>
+      <td>{{ employee.gender }}</td>
+    </tr>
+    <tr>
+      <th>Department</th>
+      <td>{{ employee.department }}</td>
+    </tr>
+    <tr>
+      <th>Designation</th>
+      <td>{{ employee.designation }}</td>
+    </tr>
+    <tr>
+      <th>Salary</th>
+      <td>{{ employee.salary | currency }}</td>
+    </tr>
+    <tr>
+      <th>Date of Joining</th>
+      <td>{{ employee.date_of_joining }}</td>
+    </tr>
+    <tr>
+      <th>Profile Photo</th>
+      <td>
+        <img [src]="employee.employee_photo" alt="Employee Photo" width="150" class="img-thumbnail" />
+      </td>
+    </tr>
+  </table>
+</div>
