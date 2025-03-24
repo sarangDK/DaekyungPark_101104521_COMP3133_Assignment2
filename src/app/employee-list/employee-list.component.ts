@@ -87,4 +87,9 @@ export class EmployeeListComponent implements OnInit {
   goToEdit(id: string) {
     this.router.navigate(['/employees/edit', id]);
   }
+  
+  logout() {
+    localStorage.removeItem('token');
+    this.router.navigate(['/login']);
+  }
 }

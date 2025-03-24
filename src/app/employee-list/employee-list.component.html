@@ -1,9 +1,12 @@
+<!-- Bootstrap lay out -->
+
 <div class="container mt-5">
   <div class="d-flex justify-content-between align-items-center mb-4">
     <h2 class="mb-0">👥 Employee List</h2>
-    <button class="btn btn-success" (click)="goToAdd()">
-      ➕ Add Employee
-    </button>
+    <div>
+      <button class="btn btn-outline-secondary me-2" (click)="logout()">🚪 Logout</button>
+      <button class="btn btn-success" (click)="goToAdd()">➕ Add Employee</button>
+    </div>
   </div>
 
   <div class="input-group mb-4">
