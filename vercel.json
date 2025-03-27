@@ -1,8 +1,7 @@
 {
+  "builds": [],
+  "outputDirectory": "dist/101104521_comp3133_assignment2/browser",
   "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
